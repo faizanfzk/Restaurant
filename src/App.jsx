@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import "./App.css";
 import { Restauraunt } from "./component/Restauraunt";
 
+
 function App() {
 const [loading,setLoading]=useState(true)
 const [error,setError]=useState(false)
@@ -45,10 +46,14 @@ const [text,setText]=useState("")
   return (   
     <div className="App">
       <h1>Restauraunt Details</h1>
+
+  
       <div>
         <input type="text" value={text} onChange={(e)=>setText(e.target.value)}  />
         <button onClick={()=>setQ(text)}>Search</button>
+  
       </div>
+    
       <br />
       <div>
         <button disabled={rating=="desc"}  onClick={()=>setRating("desc")}>Sort By Desc</button>
